@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Ass 3 try all cases in lecture to confirm diffrences between var , let , const 
+        // console.log(n) // n is not defined
+        console.log(y) // undefined
+        var y = 10
+        console.log(y) // 10
+        y = "Ali"
+        console.log(y) // ali
+
+        {
+        var numvar = 2;
+        console.log(numvar) // 2
+        }
+        console.log(numvar) // 2
+
+        // var redcleared = "John Doe";
+        // var redcleared = 0;
+        // Variables defined with var can be redeclared.
+
+
+
+        // The let keyword was introduced in ES6 (2015)
+        // Variables declared with let have Block Scope
+        // Variables declared with let must be Declared before use
+        // Variables declared with let cannot be Redeclared in the same scope
+        // console.log(x) //Cannot access 'x' before initialization
+        let x = 20
+        console.log(x) // 20
+        x= "Ali"
+        console.log(x) // ali
+
+        {
+        let numlet = 2;
+        console.log(numlet)
+        }
+        // console.log(numlet) // numlet is not defined
+        // let redcleared = "John Doe";
+        // let redcleared = 0;
+        //Variables defined with let can be redeclared.
+        let n = 2;   // Allowed
+
+        {
+        let  n= 3;   // Allowed
+        }
+
+        {
+        let n = 4;    // Allowed
+        }
+
+        // var w = 2;   // Allowed
+        // let w = 3;   // Not allowed
+
+        // {
+        // let w = 2;   // Allowed
+        // let w = 3;   // Not allowed
+        // }
+
+        // {
+        // let w = 2;   // Allowed
+        // var w = 3;   // Not allowed
+        // }
+
+
+        // The const keyword was introduced in ES6 (2015)
+        // Variables defined with const cannot be Redeclared
+        // Variables defined with const cannot be Reassigned
+        // Variables defined with const have Block Scope
+        // console.log(z) //Cannot access 'z' before initialization
+        const z = 30
+        console.log(z)
+        // z = "Ali"
+        // console.log(z) //Assignment to constant variable.
+        const std={name:"ali", age:40}// const for type  {}
+        console.log(std)
+        // console.log(std="Ali") // Uncaught TypeError: Assignment to constant variable.
+        std.age=30
+        console.log(std) // {name: 'ali', age: 30}
+        std.grade=100;
+        console.log(std)// {name: 'ali', age: 30, grade: 100}
+        std.grade=99;
+        console.log(std)
+        Object.freeze(std)
+        std.age=20;
+        console.log(std) // {name: 'ali', age: 30, grade: 99}
+        const pi=3.14;
+        console.log(pi)
+
+        {
+        const numConst = 2;
+        console.log(numConst) // 2
+        }
+        // console.log(numConst) // numConst is not defined
+
+        // let and const have block scope.
+        // let and const can not be redeclared.
+        // let and const must be declared before use.
+        // let and const does not bind to this.
+        // let and const are not hoisted.
+        // var does not have to be declared.
+        // var is hoisted.
+        // var binds to this.
+    </script>
+</body>
+</html>
